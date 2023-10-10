@@ -36,7 +36,7 @@ export const FreeCounter = ({ apiLimitCount = 0 }: FreeCounterProps) => {
               value={(apiLimitCount / MAX_FREE_COUNTS) * 100}
             />
           </div>
-          <Button className="w-full">
+          <Button className="w-full" variant="premium">
             Upgrade
             <Zap className="w-4 h-4 ml-2 fil-white" />
           </Button>
