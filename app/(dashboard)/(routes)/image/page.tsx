@@ -22,12 +22,13 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Empty } from '@/components/empty';
 import { Loader } from '@/components/loader';
-import { cn } from '@/lib/utils';
 import { Card, CardFooter } from '@/components/ui/card';
 
 import { amountOptions, formSchema, resolutionOptions } from './constants';
+import { useProModal } from '@/app/hooks/use-pro-modal';
 
 const ImagePage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [images, setImages] = useState<string[]>([]);
 
@@ -52,8 +53,9 @@ const ImagePage = () => {
       setImages(urls);
       form.reset();
     } catch (error: any) {
-      // TODO: Open Pro Modal
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
@@ -108,13 +110,7 @@ const ImagePage = () => {
                       </FormControl>
                       <SelectContent>
                         {amountOptions.map((options) => (
-                          <SelectItem
-                            key={options.value}
-                            value={options.value}
-                            // className={cn({
-                            //   'bg-gray-100': field.value === options.value,
-                            // })}
-                          >
+                          <SelectItem key={options.value} value={options.value}>
                             {options.label}
                           </SelectItem>
                         ))}
@@ -141,13 +137,7 @@ const ImagePage = () => {
                       </FormControl>
                       <SelectContent>
                         {resolutionOptions.map((options) => (
-                          <SelectItem
-                            key={options.value}
-                            value={options.value}
-                            // className={cn({
-                            //   'bg-gray-100': field.value === options.value,
-                            // })}
-                          >
+                          <SelectItem key={options.value} value={options.value}>
                             {options.label}
                           </SelectItem>
                         ))}
