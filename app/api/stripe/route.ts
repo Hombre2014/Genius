@@ -28,6 +28,7 @@ export async function GET() {
         return_url: settingsUrl,
       });
 
+      console.log('[URL_Billing]', stripeSession.url);
       return new NextResponse(JSON.stringify({ url: stripeSession.url }));
     }
 
@@ -59,9 +60,11 @@ export async function GET() {
       },
     });
 
+    console.log('[URL_SignUp]', stripeSession.url);
+
     return new NextResponse(JSON.stringify({ url: stripeSession.url }));
   } catch (error) {
-    console.log('[STRIPE_ERROR], error');
+    console.log('[STRIPE_ERROR]', error);
     return new NextResponse('Internal error', { status: 500 });
   }
 }
