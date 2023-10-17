@@ -28,7 +28,6 @@ export async function GET() {
         return_url: settingsUrl,
       });
 
-      console.log('[URL_Billing]', stripeSession.url);
       return new NextResponse(JSON.stringify({ url: stripeSession.url }));
     }
 
@@ -59,8 +58,6 @@ export async function GET() {
         userId,
       },
     });
-
-    console.log('[URL_SignUp]', stripeSession.url);
 
     return new NextResponse(JSON.stringify({ url: stripeSession.url }));
   } catch (error) {
