@@ -1,13 +1,32 @@
 'use client';
 
-import { Card, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 const testimonials = [
   {
-    name: 'Dylan',
+    name: 'Mike Dylan',
     avatar: 'D',
     title: 'Software Developer',
     description: 'The best AI toll for developers.',
+  },
+  {
+    name: 'Alice Mueller',
+    avatar: 'A',
+    title: 'Designer',
+    description: 'Generates the image you are looking for in seconds.',
+  },
+  {
+    name: 'Bob Smith',
+    avatar: 'B',
+    title: 'Student',
+    description: 'It make writing essay fun.',
+  },
+  {
+    name: 'Sonia Baker',
+    avatar: 'S',
+    title: 'Marketing Manager',
+    description:
+      'Generate your content, add images, audio or video with a single click.',
   },
 ];
 
@@ -18,18 +37,21 @@ export const LandingContent = () => {
         Testimonials
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-e lg:grid-cols-4 gap-4">
-        {testimonials.map((testimonial) => (
+        {testimonials.map((item) => (
           <Card
-            key={testimonial.description}
+            key={item.description}
             className="bg-[#192339] border-none text-white"
           >
             <CardHeader>
               <CardTitle className="flex items-center gap-x-2">
                 <div>
-                  <p className="text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-zinc-400">{testimonial.title}</p>
+                  <p className="text-lg">{item.name}</p>
+                  <p className="text-sm text-zinc-400">{item.title}</p>
                 </div>
               </CardTitle>
+              <CardContent className="pt-4 px-0">
+                {item.description}
+              </CardContent>
             </CardHeader>
           </Card>
         ))}
