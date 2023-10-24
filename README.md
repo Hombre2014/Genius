@@ -10,7 +10,7 @@
 
 ## Screenshots
 
-![Dashboard](public/Genius.jpg)
+![Dashboard](/public/Genius.JPG)
 
 ## Usage
 
