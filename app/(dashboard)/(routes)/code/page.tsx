@@ -9,7 +9,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { ChatCompletionRequestMessage } from 'openai';
 
 import Heading from '@/components/heading';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
@@ -23,6 +22,11 @@ import { formSchema } from './constants';
 import { UserAvatar } from '@/components/user-avatar';
 import { BotAvatar } from '@/components/bot-avatar';
 import { useProModal } from '@/app/hooks/use-pro-modal';
+
+type ChatCompletionRequestMessage = {
+  role: string;
+  content: string;
+};
 
 const CodePage = () => {
   const proModal = useProModal();
