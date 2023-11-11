@@ -1,32 +1,31 @@
-# Genius
+# My-Tools.ai
 
 > Experience the power of AI tools.
 
 ## Built With
 
-- Major languages: TypeScript, JavaScript Next.js
+- Major languages: TypeScript
+- Framework: Next.js
 - Backend: MySQL from [Planetscale](https://app.planetscale.com/)
 - Tools used: Stripe, Crisp, Clerk, Prisma, zustand
 
 ## Screenshots
 
-![Dashboard](/public/Genius.JPG)
+![Home](/public/my-tools.JPG)
 
-## Usage
+![Dashboard](/public/Dashboard.JPG)
 
-- Clone the repository using `git clone https://github.com/Hombre/Genius`
-- Change directory into the project folder: `cd Genius`
-- Run `npm install`
-- Run `npm run dev`
-- Open your browser to http://localhost:3000
+![Conversation](/public/Conversation.JPG)
+
+![Pricing](/public/Pricing.JPG)
 
 ## Live Link
 
-No deployment yet.
+[MyTools.ai](https://my-tools.ai)
 
 ### Deployment
 
-- Using [Vercel](https://vercel.com)
+- Using [Hostinger VPS](https://hostingerl.com)
 
 ## Author
 
