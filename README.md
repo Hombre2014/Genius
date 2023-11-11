@@ -1,6 +1,6 @@
 # My-Tools.ai
 
-> Experience the power of AI tools.
+> Experience the power of AI tools - ChatGPT and DALLE-3.
 
 ## Built With
 
