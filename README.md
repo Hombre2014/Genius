@@ -11,7 +11,7 @@
 
 ## Screenshots
 
-![Home](/public/my-tools.JPG)
+![Home](/public/my-tools.jpg)
 
 ![Dashboard](/public/Dashboard.JPG)
 
