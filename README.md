@@ -23,6 +23,10 @@
 
 [MyTools.ai](https://my-tools.ai)
 
+## Upvote it on Product Hunt
+
+<a href="https://www.producthunt.com/posts/my-tools-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-my&#0045;tools&#0045;ai" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=436299&theme=light" alt="My&#0032;tools&#0046;ai - Best&#0032;AI&#0032;tools&#0032;for&#0032;developers&#0032;and&#0032;creators&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ### Deployment
 
 - Using [Hostinger VPS](https://hostingerl.com)
